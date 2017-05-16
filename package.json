@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "test": "node_modules/.bin/ava --verbose",
+    "test:watch": "node_modules/.bin/ava --verbose --watch",
     "start": "node_modules/.bin/webpack-dev-server"
   },
   "author": "",
@@ -50,5 +52,15 @@
     "redux-saga": "^0.12.1",
     "reduxsauce": "^0.5.0",
     "seamless-immutable": "^7.1.2"
+  },
+  "ava": {
+    "files": [
+      "test/**/*.js"
+    ],
+    "babel": "inherit",
+    "require": [
+      "babel-register",
+      "babel-polyfill"
+    ]
   }
 }
