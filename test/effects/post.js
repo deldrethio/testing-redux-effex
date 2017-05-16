@@ -12,7 +12,7 @@ const mockStore = configureStore( [
   effectsMiddleware( effects )
 ] );
 
-test('Test fetchPostsAsync', async t => {
+test('fetchPostsAsync', async t => {
   const EXPECTED = [
     {
       type: Types.RECEIVE_POSTS,
