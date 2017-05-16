@@ -1,11 +1,14 @@
-import React, { PropTypes } from 'react';
+// @flow
+
+import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import Post from '../components/post';
+import Post from 'app/components/post';
 
 class Posts extends React.Component {
-  static propTypes = {
-    posts: PropTypes.array
+  props: {
+    posts: Array<Post>
   };
 
   render () {

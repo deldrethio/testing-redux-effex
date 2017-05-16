@@ -1,8 +1,17 @@
-import React, { PropTypes } from 'react';
+// @flow
+
+import React from 'react';
+import PropTypes from 'prop-types';
+
+export type PostType = {
+  id: Number,
+  title: String,
+  body: String
+};
 
 export default class Post extends React.Component {
-  static propTypes = {
-    post: PropTypes.object
+  props: {
+    post: PostType
   };
 
   render () {

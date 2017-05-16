@@ -1,12 +1,13 @@
+// @flow
+
 import React from 'react';
-import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import Posts from './posts';
+import Posts from 'app/containers/posts';
 
 class App extends React.Component {
-  static propTypes = {
-    loaded: PropTypes.bool
+  props: {
+    loaded: Boolean
   };
 
   render () {

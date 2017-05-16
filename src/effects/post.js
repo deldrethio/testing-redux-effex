@@ -5,7 +5,7 @@ import { Types, Creators } from 'app/actions';
 
 import Api from 'app/services/api';
 
-async function fetchPostsAsync ({ actions, dispatch, getState }: EffectParams) {
+export async function fetchPostsAsync ({ actions, dispatch, getState }: EffectParams) {
   const response = await Api.getPosts();
 
   if (response.ok) {

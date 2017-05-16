@@ -5,7 +5,7 @@ import errorHandler from 'app/effects/error';
 
 import { Types, Creators } from 'app/actions';
 
-async function loadedAync ({ action, dispatch, getState }: EffectParams) {
+export async function loadedAync ({ action, dispatch, getState }: EffectParams) {
   dispatch(Creators.fetchPosts());
 }
 
