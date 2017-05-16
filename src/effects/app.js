@@ -5,14 +5,14 @@ import errorHandler from 'app/effects/error';
 
 import { Types, Creators } from 'app/actions';
 
-export async function loadedAync ({ action, dispatch, getState }: EffectParams) {
-  dispatch(Creators.fetchPosts());
+export async function loadedAsync ( { dispatch }: EffectParams ) {
+  dispatch( Creators.fetchPosts() );
 }
 
 export default [
   {
     action: Types.LOADED,
-    effect: loadedAync,
+    effect: loadedAsync,
     error: errorHandler
   }
 ];
